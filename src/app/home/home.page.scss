@@ -1,0 +1,58 @@
+ion-content {
+    --ion-background-color: #246196;
+}
+
+.Imagen {
+    margin-top: 60px;
+    margin-left: 50%;
+    width: auto;
+    margin: auto;
+    display: block;
+}
+
+ion-item img {
+    width: auto;
+    margin: auto;
+    display: block;
+}
+
+.Continuar {
+    margin-top: 28px;
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 2.4px;
+    font-size: 16px;
+}
+
+ion-item p {
+    margin-top: 60px;
+    width: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.Info {
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 2.4px;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    letter-spacing: 2.4px;
+}
+
+.Container {
+    text-align: center !important;
+    p {
+        font-size: 20px;
+        color: white;
+        text-align: center !important;
+        line-height: 30px;
+    }
+}

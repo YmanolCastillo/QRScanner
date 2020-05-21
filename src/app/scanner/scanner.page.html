@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+        <ion-item color="secondary" class="Volver" routerLink="/home">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+            <ion-label class="Volver">
+                Volver
+            </ion-label>
+        </ion-item>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <input #fileinput type="file" accept="image/*;capture=camera" hidden (change)="handleFile($event.target.files)">
+
+    <ion-button class="Image" (click)="CaptureImage()">
+        <ion-icon slot="start" name="camera-outline"></ion-icon>
+        Agregar Imagen
+    </ion-button>
+
+
+    <ion-button class="Scan" (click)="StartScan()">
+        <ion-icon slot="start" name="qr-code-outline"></ion-icon>
+        Escanear
+    </ion-button>
+
+    <video #video [hidden]="!scanActive" width="100%"></video>
+    <canvas #canvas hidden></canvas>
+
+    <ion-button class="Stop" (click)="StopScanner()" *ngIf="scanActive">
+        <ion-icon slot="start" name="close-outline"></ion-icon>
+        Detener Escaner
+    </ion-button>
+
+    <ion-card color="primary" *ngIf="scanResult">
+        <ion-list-header>
+            <ion-label class="Card-Title">Información</ion-label>
+        </ion-list-header>
+        <ion-card-content>
+            {{ scanResult }}
+        </ion-card-content>
+    </ion-card>
+    <ion-button class=" Reset " (click)="Reset() " *ngIf="scanResult ">
+        <ion-icon slot="start " name="refresh-outline "></ion-icon>
+        Resetear
+    </ion-button>
+
+</ion-content>
